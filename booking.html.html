@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking page</title>
+    <link rel="stylesheet" href="Booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    
+    <form class="booking-form">
+        <h1 class="form-title">- Booking Details Entry (Forwarding) -</h1>
+
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" name="bookingNo" class="form-control fancy-placeholder"
+                    data-placeholder="Enter your booking number" required>
+                <label>Booking No.</label>
+            </div>
+            <div class="form-group">
+                <input type="date" name="bookingDate" class="form-control" value="" required>
+              
+
+                <label>Booking Date</label>
+            </div>
+            <div class="form-group">
+                <input type="date" name="bookingValidityDate" class="form-control" value="2025-04-12" required>
+              
+                <label>Booking Validity Date</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="shippingLine" class="form-control" required>
+                    <option value="" disabled selected>Choose your shipping line</option>
+                    <option value="line1">Shipping Line 1</option>
+                </select>
+                <label>Shipping Line</label>
+            </div>
+            <div class="form-group">
+                <select name="nvocc" class="form-control" required>
+                    <option value="" disabled selected>Select NVOCC/Forwarder</option>
+                </select>
+                <label>NVOCC/Forwarder</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="vesselVoy" class="form-control" required>
+                    <option value="" disabled selected>Select vessel and voyage</option>
+                </select>
+                <label><span class="required">*</span>Vessel/Voy</label>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" name="etd" class="form-control" placeholder="Enter ETD">
+                    <div class="input-group-append">ETD</div>
+                </div>
+                <div class="input-group" style="margin-top: 10px;">
+                    <input type="text" name="eta" class="form-control" placeholder="Enter ETA">
+                    <div class="input-group-append">ETA</div>
+                </div>
+                <label>ETD/ ETA Destination</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="pickupLocation" class="form-control">
+                    <option value="" disabled selected>Choose pickup location</option>
+                </select>
+                <label>PickUp Location</label>
+            </div>
+            <div class="form-group">
+                <select name="handOver" class="form-control">
+                    <option value="" disabled selected>Select hand over method</option>
+                </select>
+                <label>Hand Over</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="shipperRef" class="form-control fancy-placeholder"
+                    data-placeholder="Enter reference number">
+                <label>Shipper Ref. no</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" name="pol" class="form-control fancy-placeholder"
+                    data-placeholder="Enter Port of Loading">
+                <label>POL</label>
+            </div>
+            <div class="form-group">
+                <select name="pod" class="form-control" required>
+                    <option value="" disabled selected>Select Port of Discharge</option>
+                </select>
+                <label><span class="required">*</span>POD</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="fpd" class="form-control" required>
+                    <option value="" disabled selected>Select FPD</option>
+                </select>
+                <label><span class="required">*</span>FPD</label>
+            </div>
+            <div class="form-group">
+                <select name="bkgTill" class="form-control">
+                    <option value="" disabled selected>Select BKG Till</option>
+                </select>
+                <label>BKG. Till</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="shipper" class="form-control">
+                    <option value="" disabled selected>Select Shipper</option>
+                </select>
+                <label>Shipper</label>
+            </div>
+            <div class="form-group">
+                <select name="client" class="form-control">
+                    <option value="" disabled selected>Select Client</option>
+                </select>
+                <label>Client</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="chaName" class="form-control">
+                    <option value="" disabled selected>Select CHA Name</option>
+                </select>
+                <label>CHA Name</label>
+            </div>
+            <div class="form-group">
+                <select name="broker" class="form-control">
+                    <option value="" disabled selected>Select Broker</option>
+                </select>
+                <label>Broker</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="hblFrtTerms" class="form-control">
+                    <option value="" disabled selected>Select Terms</option>
+                </select>
+                <label>HBL Frt. Terms</label>
+            </div>
+            <div class="form-group">
+                <select name="blType" class="form-control">
+                    <option value="" disabled selected>Select Type</option>
+                </select>
+                <label>BL Type</label>
+            </div>
+            <div class="form-group">
+                <select name="handlingOffice" class="form-control">
+                    <option value="" disabled selected>Select Office</option>
+                </select>
+                <label>Handling Office</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="mblFrtTerms" class="form-control">
+                    <option value="" disabled selected>Select Terms</option>
+                </select>
+                <label>MBL Frt. Terms</label>
+            </div>
+            <div class="form-group">
+                <select name="docsUser" class="form-control">
+                    <option value="" disabled selected>Select User</option>
+                </select>
+                <label>Docs. User</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="overseasAgent" class="form-control">
+                    <option value="" disabled selected>Select Agent</option>
+                </select>
+                <label>Overseas Agent</label>
+            </div>
+            <div class="form-group">
+                <select name="marketingPerson" class="form-control">
+                    <option value="" disabled selected>Select Person</option>
+                </select>
+                <label>Marketing Person</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="sendingAgent" class="form-control">
+                    <option value="" disabled selected>Select Agent</option>
+                </select>
+                <label>Sending Agent</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="contractNo" class="form-control fancy-placeholder"
+                    data-placeholder="Enter contract number">
+                <label>Contract No.</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="buyer" class="form-control">
+                    <option value="" disabled selected>Select Buyer</option>
+                </select>
+                <label>Buyer</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="stuffingType" class="form-control" required>
+                    <option value="" disabled selected>Select stuffing type</option>
+                    <option value="Factory Stuff">Factory Stuff</option>
+                </select>
+                <label><span class="required">*</span>Stuffing Type</label>
+            </div>
+            <div class="form-group">
+                <select name="stuffingPlace" class="form-control">
+                    <option value="" disabled selected>Select stuffing place</option>
+                </select>
+                <label>Stuffing Place</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="cargoType" class="form-control" required>
+                    <option value="" disabled selected>Select cargo type</option>
+                </select>
+                <label><span class="required">*</span>Cargo Type</label>
+            </div>
+            <div class="form-group">
+                <select name="shipmentType" class="form-control" required>
+                    <option value="" disabled selected>Select shipment type</option>
+                    <option value="CY/CY">CY/CY</option>
+                </select>
+                <label><span class="required">*</span>Shipment Type</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="doSentToParty" class="form-control">
+                    <option value="" disabled selected>Select if DO sent to party</option>
+                    <option value="YES">YES</option>
+                </select>
+                <label>DO Sent to Party</label>
+            </div>
+            <div class="form-group">
+                <input type="date" name="doDate" class="form-control" value="2025-04-08">
+                
+                <label>Date</label>
+            </div>
+            <div class="form-group">
+                <select name="commodity" class="form-control">
+                    <option value="" disabled selected>Select commodity</option>
+                </select>
+                <label>Commodity</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <select name="isHaz" class="form-control">
+                    <option value="" disabled selected>Select if HAZ</option>
+                    <option value="NonHaz">NonHaz</option>
+                </select>
+                <label>Is HAZ</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="hazClass" class="form-control fancy-placeholder"
+                    data-placeholder="Enter HAZ class">
+                <label>Class</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="uin" class="form-control fancy-placeholder" data-placeholder="Enter UIN">
+                <label>UIN</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="grp" class="form-control fancy-placeholder" data-placeholder="Enter GRP">
+                <label>Grp</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+                <textarea class="form-control remarks-input" name="remarks"
+                    placeholder="Enter any additional remarks or special handling instructions..."></textarea>
+                <label>Remarks</label>
+            </div>
+        </div>
+
+        <div class="container-section">
+            <div class="section-title">No Of Containers Type One</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="noOfContainerOne" class="form-control fancy-placeholder"
+                        data-placeholder="Enter container quantity">
+                    <label>No Of Container</label>
+                </div>
+                <div class="form-group">
+                    <select name="sizeGrWtOne" class="form-control">
+                        <option value="" disabled selected>Select container size/weight</option>
+                    </select>
+                    <label>Size/Gr Wt</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-section">
+            <div class="section-title">No Of Containers Type Two</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="noOfContainerTwo" class="form-control fancy-placeholder"
+                        data-placeholder="Enter container quantity">
+                    <label>No Of Container</label>
+                </div>
+                <div class="form-group">
+                    <select name="sizeGrWtTwo" class="form-control">
+                        <option value="" disabled selected>Select container size/weight</option>
+                    </select>
+                    <label>Size/Gr Wt</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Booking</button>
+    </form>
+</body>
+
+</html>

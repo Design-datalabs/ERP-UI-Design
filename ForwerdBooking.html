@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forwarding Work - Sea Export</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/FrwBooking.css">
+    <link rel="stylesheet" href="css/newnavbar.css">
+    
+    <!-- Add jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add navbar include script -->
+  
+</head>
+
+<body>
+
+
+
+    <section class="booking-section">
+        <div class="container-fluid  ">
+            <div class="header">
+                <h1>FORWARDING WORK- SEA EXPORT <span class="subtitle">(Direct Shipping Line)</span></h1>
+                <button class="add-details-btn">
+                    <i class="bi bi-plus-lg"></i>
+                    Add DO Details
+                </button>
+            </div>
+
+            <div class="search-section">
+
+                <div class="search-container">
+                    <div class="row">
+                        <div class="search-field col-lg-3">
+                           
+                            <input type="text" class="search-input"
+                                placeholder="🔍 Search by JOB / HBL / MASTERBL / BOOKING / CONTAINER NO">
+                        </div>
+
+                        <div class="date-field col-lg-3">
+                            <label>From Date</label>
+                            <div class="input-with-icon">
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="date-field col-lg-3">
+                            <label>To Date</label>
+                            <div class="input-with-icon">
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="select-field col-lg-3">
+                            <label>Consignee</label>
+                            <div class="input-with-icon">
+                                <select>
+                                    <option value="">All Consignee</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-row">
+                    <div class="select-field">
+                        <label>Client Name</label>
+                        <div class="input-with-icon">
+                            <select>
+                                <option value="">Search Client</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="select-field">
+                        <label>Vsl/Voys</label>
+                        <div class="input-with-icon">
+                            <select>
+                                <option value="">Search Vessel/Voyage</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="select-field">
+                        <label>Master Report</label>
+                        <div class="input-with-icon">
+                            <select>
+                                <option value="">Select Master Report</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-excel">
+                    <i class="bi bi-arrow-down-circle"></i>
+                    Excel
+                </button>
+                <button class="btn-view">
+                    <i class="bi bi-eye"></i>
+                    View
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <div class="booking-section">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class=" input-group mb-3">
+                    
+                    <input type="text" class="form-control" placeholder="🔍 search" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="filter-container">
+                    <div class="filter-label">
+                        <span>Filter</span>
+                    </div>
+                    <div class="filter-select">
+                        <select>
+                            <option>Select Client</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="nav-container">
+        <nav class="section-nav">
+            <a href="#shipment-section" class="tabs active" data-section="shipment">
+                <i class="bi bi-box-seam"></i>
+                Shipment Info
+            </a>
+            <a href="#container-section" class="tabs" data-section="container">
+                <i class="bi bi-truck"></i>
+                Container Info
+            </a>
+            <a href="#dates-section" class="tabs" data-section="dates">
+                <i class="bi bi-calendar-event"></i>
+                Key Dates & Status
+            </a>
+            <a href="#documentation-section" class="tabs" data-section="documentation">
+                <i class="bi bi-file-text"></i>
+                Documentation
+            </a>
+            <a href="#parties-section" class="tabs" data-section="parties">
+                <i class="bi bi-people"></i>
+                Parties Involved
+            </a>
+            <a href="#routing-section" class="tabs" data-section="routing">
+                <i class="bi bi-compass"></i>
+                Routing & Vessel
+            </a>
+            <a href="#cargo-section" class="tabs" data-section="cargo">
+                <i class="bi bi-box"></i>
+                Cargo Description
+            </a>
+            <a href="#financial-section" class="tabs" data-section="financial">
+                <i class="bi bi-currency-dollar"></i>
+                Financial Details
+            </a>
+        </nav>
+    </div>
+    </div>
+
+
+  
+
+
+    <div class="table-container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th id="shipment-section" class="group-header" colspan="9">Shipment Information</th>
+                    <th id="container-section" class="group-header" colspan="12">Container Information</th>
+                    <th id="dates-section" class="group-header" colspan="13">Key Dates and Status Tracking</th>
+                    <th id="documentation-section" class="group-header" colspan="5">Documentation and Compliance
+                    </th>
+                    <th id="parties-section" class="group-header" colspan="6">Parties Involved</th>
+                    <th id="routing-section" class="group-header" colspan="4">Routing and Vessel Information
+                    </th>
+                    <th id="cargo-section" class="group-header" colspan="9">Cargo Description</th>
+                    <th id="financial-section" class="group-header" colspan="8">Financial and Operational
+                        Details</th>
+                </tr>
+                <tr class="section-header">
+                    <!-- Basic Info -->
+                    <!-- <th><input type="checkbox" class="form-check-input"></th> -->
+                    <th>Action</th>
+                    <th>#SR</th>
+                    <th>SHIPMENT #</th>
+                    <th>BKG No</th>
+                    <th>BKG DATE</th>
+                    <th>USER NAME</th>
+                    <th>CARRIER</th>
+                    <th>CARRIER CONTRACT NO</th>
+                    <th class="section-gap">QUOTE NO</th>
+
+                    <!-- Container Details -->
+                    <th>CNTR NO</th>
+                    <th>SEAL NO.</th>
+                    <th>CNTR TYPE</th>
+                    <th>No of containers</th>
+
+                    <!-- Dates & Status -->
+                    <th>CNTR TEU</th>
+                    <th>PICK UP DATE</th>
+                    <th>GATE IN DATE</th>
+                    <th>HANDOVER DATE</th>
+                    <th>ETD</th>
+                    <th>ATD</th>
+                    <th>ETA</th>
+                    <th class="section-gap">POD</th>
+
+                    <!-- Documentation -->
+                    <th>SI REFERENCE #</th>
+                    <th>SI DONE DATE</th>
+                    <th>ISF DONE DATE</th>
+                    <th>AMS CODE</th>
+                    <th>AMS DONE DATE</th>
+                    <th>ACI</th>
+                    <th>DOC Dues</th>
+                    <th>PortCut</th>
+                    <th>HBL DRAFT Date</th>
+                    <th>FINAL HBL DATE</th>
+                    <th>MBL UPDATE DATE</th>
+                    <th>PRE ALERT DATE</th>
+                    <th class="section-gap">TELEX RELEASE</th>
+
+                    <!-- Parties -->
+                    <th>SHIPPER</th>
+                    <th>CONSIGNEE</th>
+                    <th>NOTIFY PARTY</th>
+                    <th>BILL TO PARTY</th>
+                    <th>DESTINATION AGENT</th>
+                    <th>VESSEL & VOY</th>
+                    <th>Service</th>
+                    <th>POR</th>
+
+                    <!-- Shipping Details -->
+                    <th>POL</th>
+                    <th>POD</th>
+                    <th>FPOD</th>
+                    <th>HBL description</th>
+                    <th>SHIPMENT REMARKS</th>
+                    <th>BUY</th>
+                    <th>SALE</th>
+                    <th>HBL No</th>
+
+                    <!-- Bill of Lading -->
+                    <th>HBL TERMS</th>
+                    <th>HBL TYPE</th>
+                    <th>MBL NO</th>
+                    <th>MBL Terms</th>
+                    <th>MBL TYPE</th>
+                    <th>PAYMENT REQUEST DATE</th>
+                    <th>FCL Loaded</th>
+                    <th class="section-gap">Custom SAL Rep</th>
+
+                    <!-- Additional Info -->
+                    <th>FL SENT DATE</th>
+                    <th>MOTHER VESSEL</th>
+                    <th>Booking Release Date</th>
+                    <th>BKG TILL</th>
+                    <th>T/S PORT</th>
+                    <th>T/S ETA</th>
+                    <th>T/S ETD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- <td><input type="checkbox" class="form-check-input"></td> -->
+                    <td>
+                        <div class="dropdown">
+                            <button class="action-btn" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td>SR001</td>
+                    <td>SHIP001</td>
+                    <td>BKG001</td>
+                    <td>2024-03-15</td>
+                    <td>John Doexfvbxfxdfbvbdbb</td>
+                    <td>MSC</td>
+                    <td>CONT123</td>
+                    <td class="section-gap">QT001</td>
+                    <td>CNTR001</td>
+                    <td>SEAL001zdvzxdbb</td>
+                    <td>40HC</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2024-03-16</td>
+                    <td>2024-03-17</td>
+                    <td>2024-03-18</td>
+                    <td>2024-03-20</td>
+                    <td>2024-03-20</td>
+                    <td>2024-04-05</td>
+                    <td class="section-gap">Dubai xfb xff</td>
+                    <td>SI001</td>
+                    <td>2024-03-15</td>
+                    <td>2024-03-15</td>
+                    <td>AMS001</td>
+                    <td>2024-03-15</td>
+                    <td>Yes</td>
+                    <td>Completed</td>
+                    <td>2024-03-19</td>
+                    <td>2024-03-21</td>
+                    <td>2024-03-22</td>
+                    <td>2024-03-23</td>
+                    <td>2024-03-24</td>
+                    <td class="section-gap">Yes</td>
+                    <td>ABC Trading zdvzzdvfcbhndngnfgnfgnfgnfgnfgnfgn</td>
+                    <td>XYZ Corp</td>
+                    <td>XYZ Corp</td>
+                    <td>ABC Trading</td>
+                    <td>Agent Dubai</td>
+                    <td>MSC ANNA V245</td>
+                    <td>Express</td>
+                    <td>Mumbai</td>
+                    <td>Mumbai</td>
+                    <td>Dubai</td>
+                    <td>Dubai</td>
+                    <td>General Cargo</td>
+                    <td>Handle with care</td>
+                    <td>5000</td>
+                    <td>6000</td>
+                    <td class="section-gap">HBL001</td>
+                    <td>Prepaid</td>
+                    <td>Original</td>
+                    <td>MBL001</td>
+                    <td>Prepaid</td>
+                    <td>Original</td>
+                    <td>2024-03-15</td>
+                    <td>Yes</td>
+                    <td class="section-gap">SAL001</td>
+                    <td>2024-03-15</td>
+                    <td>MSC ANNA</td>
+                    <td>2024-03-15</td>
+                    <td>2024-03-25</td>
+                    <td>Jebel Ali</td>
+                    <td>2024-03-22</td>
+                    <td>2024-03-23</td>
+                </tr>
+                <tr>
+                    <!-- <td><input type="checkbox" class="form-check-input"></td> -->
+                    <td>
+                        <div class="dropdown">
+                            <button class="action-btn" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td>SR001</td>
+                    <td>SHIP001</td>
+                    <td>BKG001</td>
+                    <td>2024-03-15</td>
+                    <td>John Doexfvbxfxdfbvbdbb</td>
+                    <td>MSC</td>
+                    <td>CONT123</td>
+                    <td class="section-gap">QT001</td>
+                    <td>CNTR001</td>
+                    <td>SEAL001zdvzxdbb</td>
+                    <td>40HC</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2024-03-16</td>
+                    <td>2024-03-17</td>
+                    <td>2024-03-18</td>
+                    <td>2024-03-20</td>
+                    <td>2024-03-20</td>
+                    <td>2024-04-05</td>
+                    <td class="section-gap">Dubai xfb xff</td>
+                    <td>SI001</td>
+                    <td>2024-03-15</td>
+                    <td>2024-03-15</td>
+                    <td>AMS001</td>
+                    <td>2024-03-15</td>
+                    <td>Yes</td>
+                    <td>Completed</td>
+                    <td>2024-03-19</td>
+                    <td>2024-03-21</td>
+                    <td>2024-03-22</td>
+                    <td>2024-03-23</td>
+                    <td>2024-03-24</td>
+                    <td class="section-gap">Yes</td>
+                    <td>ABC Trading zdvzzdvfcbhndngnfgnfgnfgnfgnfgnfgn</td>
+                    <td>XYZ Corp</td>
+                    <td>XYZ Corp</td>
+                    <td>ABC Trading</td>
+                    <td>Agent Dubai</td>
+                    <td>MSC ANNA V245</td>
+                    <td>Express</td>
+                    <td>Mumbai</td>
+                    <td>Mumbai</td>
+                    <td>Dubai</td>
+                    <td>Dubai</td>
+                    <td>General Cargo</td>
+                    <td>Handle with care</td>
+                    <td>5000</td>
+                    <td>6000</td>
+                    <td class="section-gap">HBL001</td>
+                    <td>Prepaid</td>
+                    <td>Original</td>
+                    <td>MBL001</td>
+                    <td>Prepaid</td>
+                    <td>Original</td>
+                    <td>2024-03-15</td>
+                    <td>Yes</td>
+                    <td class="section-gap">SAL001</td>
+                    <td>2024-03-15</td>
+                    <td>MSC ANNA</td>
+                    <td>2024-03-15</td>
+                    <td>2024-03-25</td>
+                    <td>Jebel Ali</td>
+                    <td>2024-03-22</td>
+                    <td>2024-03-23</td>
+                </tr>
+                <tr>
+                    <!-- <td><input type="checkbox" class="form-check-input"></td> -->
+                    <td>
+                        <div class="dropdown">
+                            <button class="action-btn" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td>SR001</td>
+                    <td>SHIP001</td>
+                    <td>BKG001</td>
+                    <td>2024-03-15</td>
+                    <td>John Doexfvbxfxdfbvbdbb</td>
+                    <td>MSC</td>
+                    <td>CONT123</td>
+                    <td class="section-gap">QT001</td>
+                    <td>CNTR001</td>
+                    <td>SEAL001zdvzxdbb</td>
+                    <td>40HC</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2024-03-16</td>
+                    <td>2024-03-17</td>
+                    <td>2024-03-18</td>
+                    <td>2024-03-20</td>
+                    <td>2024-03-20</td>
+                    <td>2024-04-05</td>
+                    <td class="section-gap">Dubai xfb xff</td>
+                    <td>SI001</td>
+                    <td>2024-03-15</td>
+                    <td>2024-03-15</td>
+                    <td>AMS001</td>
+                    <td>2024-03-15</td>
+                    <td>Yes</td>
+                    <td>Completed</td>
+                    <td>2024-03-19</td>
+                    <td>2024-03-21</td>
+                    <td>2024-03-22</td>
+                    <td>2024-03-23</td>
+                    <td>2024-03-24</td>
+                    <td class="section-gap">Yes</td>
+                    <td>ABC Trading zdvzzdvfcbhndngnfgnfgnfgnfgnfgnfgn</td>
+                    <td>XYZ Corp</td>
+                    <td>XYZ Corp</td>
+                    <td>ABC Trading</td>
+                    <td>Agent Dubai</td>
+                    <td>MSC ANNA V245</td>
+                    <td>Express</td>
+                    <td>Mumbai</td>
+                    <td>Mumbai</td>
+                    <td>Dubai</td>
+                    <td>Dubai</td>
+                    <td>General Cargo</td>
+                    <td>Handle with care</td>
+                    <td>5000</td>
+                    <td>6000</td>
+                    <td class="section-gap">HBL001</td>
+                    <td>Prepaid</td>
+                    <td>Original</td>
+                    <td>MBL001</td>
+                    <td>Prepaid</td>
+                    <td>Original</td>
+                    <td>2024-03-15</td>
+                    <td>Yes</td>
+                    <td class="section-gap">SAL001</td>
+                    <td>2024-03-15</td>
+                    <td>MSC ANNA</td>
+                    <td>2024-03-15</td>
+                    <td>2024-03-25</td>
+                    <td>Jebel Ali</td>
+                    <td>2024-03-22</td>
+                    <td>2024-03-23</td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal-overlay"></div>
+
+    <div class="booking-detail-container">
+        <div class="header">
+            <h2>BOOKING DETAIL</h2>
+            <button aria-label="Close">&times;</button>
+        </div>
+
+        <!-- Booking & Shipment Details Section -->
+        <div class="section">
+            <h3 class="section-title">BOOKING & Shipment Details</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" placeholder=" Booking No ">
+                    <label for="bookingNo">Booking No</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="bookingDate" value="2025-04-09" placeholder=" ">
+                    <label for="bookingDate">Booking Date</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="validityDate" value="2025-04-13" placeholder=" ">
+                    <label for="validityDate">Validity Date</label>
+                </div>
+                <div class="form-group">
+                    <select id="shippingLine">
+                        <option value="">Select Shipping Line</option>
+                        <option value="MSC">MSC</option>
+                        <option value="Maersk">Maersk</option>
+                        <option value="CMA CGM">CMA CGM</option>
+                    </select>
+                    <label for="shippingLine">Shipping Line</label>
+                </div>
+                <div class="form-group">
+                    <select id="vesselVoy" required>
+                        <option value="">Select Vessel/Voy</option>
+                        <option value="VESSEL1 / VOY1">VESSEL1 / VOY1</option>
+                        <option value="VESSEL2 / VOY2">VESSEL2 / VOY2</option>
+                    </select>
+                    <label for="vesselVoy" class="required">Vessel / Voy</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="etd" value="2025-04-09" placeholder=" ">
+                    <label for="etd">ETD</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="eta" value="2025-04-13" placeholder=" ">
+                    <label for="eta">ETA</label>
+                </div>
+                <div class="form-group">
+                    <select id="pickUpLocation">
+                        <option value="">Select Pick Up Location</option>
+                        <option value="Location A">Location A</option>
+                        <option value="Location B">Location B</option>
+                    </select>
+                    <label for="pickUpLocation">Pick Up Location</label>
+                </div>
+                <div class="form-group">
+                    <select id="handOver">
+                        <option value="">Select Hand Over</option>
+                        <option value="Handover 1">Handover 1</option>
+                        <option value="Handover 2">Handover 2</option>
+                    </select>
+                    <label for="handOver">Hand Over</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="pod" placeholder="Enter POD" required>
+                    <label for="pod" class="required">POD</label>
+                </div>
+                <div class="form-group">
+                    <select id="pol">
+                        <option value="">Select POL</option>
+                        <option value="Port X">Port X</option>
+                        <option value="Port Y">Port Y</option>
+                    </select>
+                    <label for="pol">POL</label>
+                </div>
+                <div class="form-group">
+                    <select id="bkgTill">
+                        <option value="">Select BKG. TILL</option>
+                        <option value="Value 1">Value 1</option>
+                        <option value="Value 2">Value 2</option>
+                    </select>
+                    <label for="bkgTill">BKG. TILL</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="fpd" placeholder="Enter FPD" required>
+                    <label for="fpd" class="required">FPD</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shipper Info Section -->
+        <div class="section">
+            <h3 class="section-title">SHIPPER INFO</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Shipper</option>
+                        <option value="">Select Shipper 1</option>
+                        <option value="">Select Shipper 2</option>
+                    </select>
+                    <label>Shipper</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Shipper Ref. No">
+                    <label>Shipper Ref. No</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select HBL Frt. Terms</option>
+                        <option value="">Select HBL Frt. Terms 1</option>
+                        <option value="">Select HBL Frt. Terms 2</option>
+                    </select>
+                    <label>HBL Frt. Terms</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select BL Type</option>
+                        <option value="">Select BL Type 1</option>
+                        <option value="">Select BL Type 2</option>
+                    </select>
+                    <label>BL Type</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select CHA Name</option>
+                        <option value="">Select CHA Name 1</option>
+                        <option value="">Select CHA Name 2</option>
+                    </select>
+                    <label>CHA Name</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Broker</option>
+                        <option value="">Select Broker 1</option>
+                        <option value="">Select Broker 2</option>
+                    </select>
+                    <label>Broker</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Client</option>
+                        <option value="">Select Client 1</option>
+                        <option value="">Select Client 2</option>
+                    </select>
+                    <label>Client</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Handling Office</option>
+                        <option value="">Select Handling Office 1</option>
+                        <option value="">Select Handling Office 2</option>
+                    </select>
+                    <label>Handling Office</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Sending Agent</option>
+                        <option value="">Select Sending Agent 1</option>
+                        <option value="">Select Sending Agent 2</option>
+                    </select>
+                    <label>Sending Agent</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Overseas Agent</option>
+                        <option value="">Select Overseas Agent 1</option>
+                        <option value="">Select Overseas Agent 2</option>
+                    </select>
+                    <label>Overseas Agent</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Docs. User</option>
+                    </select>
+                    <label>Docs. User</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Marketing Person</option>
+                        <option value="">Select Marketing Person 1</option>
+                        <option value="">Select Marketing Person 2</option>
+                    </select>
+                    <label>Marketing Person</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Contract No">
+                    <label>Contract No</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Do Sent Party</option>
+                        <option value="">Select Do Sent Party 1</option>
+                        <option value="">Select Do Sent Party 2</option>
+                    </select>
+                    <label>Do Sent Party</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" value="2025-04-13" placeholder=" ">
+                    <label>Date</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cargo & Container Details Section -->
+        <div class="section">
+            <h3 class="section-title">CARGO & CONTAINER DETAILS</h3>
+            <div class="form-grid">
+                <div class="form-group half-row">
+                    <select>
+                        <option value="">Select Buyer</option>
+                        <option value="">Select Buyer 1</option>
+                        <option value="">Select Buyer 2</option>
+                    </select>
+                    <label>Buyer</label>
+                </div>
+                <div class="form-group half-row">
+                    <select required>
+                        <option value="">Select Stuffing Place</option>
+                        <option value="">Select Stuffing Place 1</option>
+                        <option value="">Select Stuffing Place 2</option>
+                    </select>
+                    <label class="required">Stuffing Place</label>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Cargo Type</option>
+                        <option value="">Select Cargo Type 1</option>
+                        <option value="">Select Cargo Type 2</option>
+                    </select>
+                    <label class="required">Cargo Type</label>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Shipment Type</option>
+                        <option value="">Select Shipment Type 1</option>
+                        <option value="">Select Shipment Type 2</option>
+                    </select>
+                    <label class="required">Shipment Type</label>
+                </div>
+                <div class="form-group half-row">
+                    <select>
+                        <option value="">Select Commodity</option>
+                    </select>
+                    <label>Commodity</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select IS HAZ</option>
+                    </select>
+                    <label>IS HAZ</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Class">
+                    <label>Class</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter UIN">
+                    <label>UIN</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Grp">
+                    <label>Grp</label>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter No Of Containers">
+                    <label>Container Type One</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Size/Gr Wt</option>
+                    </select>
+                    <label>Size/Gr Wt</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter No Of Containers">
+                    <label>Container Type Two</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Size/Gr Wt</option>
+                    </select>
+                    <label>Size/Gr Wt</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transshipment & Charges Section -->
+        <div class="section">
+
+            <div class="section-header">
+                <h3 class="section-title d-flex align-items-center justify-content-between">
+                    TRANSSHIPMENT & CHARGES
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-icon btn-sm" id="addTranshipmentBtn"
+                            style="width: 36px; height: 36px; border-radius: 50%; background-color: #f8f9fa; color: #2962B9; border: 1px solid #e0e0e0; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                        <button class="btn btn-icon btn-sm" id="removeTranshipmentBtn"
+                            style="width: 36px; height: 36px; border-radius: 50%; background-color: #f8f9fa; color: #dc3545; border: 1px solid #e0e0e0; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </h3>
+
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <select>
+                            <option value="">Select Trans. Port</option>
+                        </select>
+                        <label>Transhipment One If</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Conn. Vsl/Voy">
+                        <label>Conn. Vsl/Voy</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder=" ">
+                        <label>ETA</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder=" ">
+                        <label>ETD</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="transhipmentContainer"></div>
+
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <input type="text" placeholder="Enter Bill Head">
+                    <label>Bill Head</label>
+                </div>
+                <div class="form-group full-width">
+                    <input type="text" placeholder="Enter Narration">
+                    <label>Narration</label>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Buy Rate">
+                    <label>Buy Rate</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="USD">USD</option>
+                    </select>
+                    <label>Curr.</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Sell Rate">
+                    <label>Sell Rate</label>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="USD">USD</option>
+                    </select>
+                    <label>Curr.</label>
+                </div>
+            </div>
+
+            <div class="section-actions">
+                <button type="reset" class="btn-reset">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                    Reset
+                </button>
+                <button type="button" class="btn-next ">
+                    <i class="bi bi-arrow-right"></i>
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</body>
+
+</html>

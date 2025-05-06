@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Navigation Bar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- navbar css -->
+<link rel="stylesheet" href="css/newnavbar.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <!-- Brand and mobile toggle -->
+      <a class="navbar-brand" href="#">
+        <img src="https://storage.googleapis.com/a1aa/image/ecb69e51-bf16-4a9d-2fb3-e58a4861d9ba.jpg" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Main navigation content -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Center navigation -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">HOME</a>
+          </li>
+          
+          <!-- EXPORT dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exportDropdown" role="button" data-bs-toggle="dropdown">
+              EXPORT
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">SEA EXPORT (Forwarding Booking)</a></li>
+              <li><a class="dropdown-item" href="#">Air Export</a></li>
+              <li><a class="dropdown-item" href="#">Upload BL / MBL</a></li>
+              <li><a class="dropdown-item" href="#">Daily Report</a></li>
+              <li><a class="dropdown-item" href="#">DOC Dispatch</a></li>
+              <li><a class="dropdown-item" href="#">DSR Export</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">TRANSPORT / GENERAL</a>
+          </li>
+          
+          <!-- IMPORT dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="importDropdown" role="button" data-bs-toggle="dropdown">
+              IMPORT
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Add / Edit Job From CargoWise</a></li>
+              <li><a class="dropdown-item" href="#">Import Search Register</a></li>
+              
+              <!-- Nested dropdown for Sea Import -->
+              <li class="dropdown-submenu dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Sea Import</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Add / Edit Job</a></li>
+                  <li><a class="dropdown-item" href="#">MBL NO For Split HBL or LCL</a></li>
+                  <li><a class="dropdown-item" href="#">Import General Manifest</a></li>
+                  <li><a class="dropdown-item" href="#">Search Condition</a></li>
+                  <li><a class="dropdown-item" href="#">Import File</a></li>
+                  <li><a class="dropdown-item" href="#">Pre Arrival Notice</a></li>
+                  <li><a class="dropdown-item" href="#">Arrival Notice</a></li>
+                  <li><a class="dropdown-item" href="#">Delivery Advice</a></li>
+                  <li><a class="dropdown-item" href="#">Import From Other CREST Company (Create Own Job)</a></li>
+                  <li><a class="dropdown-item" href="#">DSR IMPORT</a></li>
+                </ul>
+              </li>
+              
+              <li><a class="dropdown-item" href="#">Air Import</a></li>
+            </ul>
+          </li>
+          
+          <!-- TRANSACTIONS dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="transactionsDropdown" role="button" data-bs-toggle="dropdown">
+              TRANSACTIONS / ACCTS. ENTRY
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Sale/Purchase Entry</a></li>
+              
+              <!-- Nested dropdown for DEBIT NOTE -->
+              <li class="dropdown-submenu dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">DEBIT NOTE</a>
+                <ul class="dropdown-menu">
+                  <!-- Nested dropdown for EXPORT -->
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">EXPORT</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Overseas Agent Debit/Credit Note</a></li>
+                      <li><a class="dropdown-item" href="#">Print Debit/Credit Note</a></li>
+                      <li><a class="dropdown-item" href="#">Print Work Sheet</a></li>
+                      <li><a class="dropdown-item" href="#">Crest/Overseas Bill</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- Nested dropdown for IMPORT -->
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">IMPORT</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Overseas Agent Debit/Credit Note</a></li>
+                      <li><a class="dropdown-item" href="#">Print Debit/Credit Note</a></li>
+                      <li><a class="dropdown-item" href="#">Print Work Sheet</a></li>
+                      <li><a class="dropdown-item" href="#">Crest/Overseas Bill</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- ACCTS REPORTS dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" role="button" data-bs-toggle="dropdown">
+              ACCTS REPORTS
+            </a>
+            <ul class="dropdown-menu">
+              <!-- Nested dropdown for REGISTER -->
+              <li class="dropdown-submenu dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">REGISTER</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sale Bill Register</a></li>
+                  <li><a class="dropdown-item" href="#">Purchase Bill Register</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- MASTER dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="masterDropdown" role="button" data-bs-toggle="dropdown">
+              MASTER
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">CITY/BRANCH NAME</a></li>
+              <li><a class="dropdown-item" href="#">MARKETING PERSON</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!-- Right side icons -->
+<ul class="navbar-nav" style="display: flex;justify-content: space-between;align-items: center;width: 400px;">
+          <!-- Language/Country dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown">
+              <img src="https://flagcdn.com/w20/us.png" class="country-flag" alt="USA">
+              <span class="d-none d-lg-inline">EN</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" style="width: 250px;">
+              <li class="dropdown-header">Select Language/Country</li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="https://flagcdn.com/w20/us.png" class="country-flag me-2"> English (US)
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="https://flagcdn.com/w20/gb.png" class="country-flag me-2"> English (UK)
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="https://flagcdn.com/w20/es.png" class="country-flag me-2"> Español
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="https://flagcdn.com/w20/fr.png" class="country-flag me-2"> Français
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="https://flagcdn.com/w20/de.png" class="country-flag me-2"> Deutsch
+                </a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-globe me-2"></i>More languages...</a></li>
+            </ul>
+          </li>
+          
+          <!-- Fullscreen toggle -->
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link fullscreen-icon" href="#" id="fullscreenToggle" title="Toggle Fullscreen">
+              <i class="fas fa-expand"></i>
+            </a>
+          </li>
+          
+          <!-- Apps dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-th-large"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3" style="width: 350px;">
+              <div class="row g-2 mb-3">
+                <div class="col-4">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-file-alt fa-2x mb-2 text-primary"></i>
+                    <div>Documents</div>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-chart-line fa-2x mb-2 text-primary"></i>
+                    <div>Analytics</div>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-users fa-2x mb-2 text-primary"></i>
+                    <div>Users</div>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-cogs fa-2x mb-2 text-primary"></i>
+                    <div>Settings</div>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-calendar-alt fa-2x mb-2 text-primary"></i>
+                    <div>Calendar</div>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-envelope fa-2x mb-2 text-primary"></i>
+                    <div>Mail</div>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="weather-widget d-flex align-items-center">
+                  <i class="fas fa-sun fa-2x me-2"></i>
+                  <div>
+                    <div class="weather-temp">72°F</div>
+                    <small>Sunny, New York</small>
+                  </div>
+                </div>
+                <div class="calendar-widget text-center">
+                  <div class="calendar-date">15</div>
+                  <div class="calendar-day">Wed</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- Notifications dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link position-relative" href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end p-0" style="width: 350px;">
+              <li class="px-3 py-2 border-bottom bg-light d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">Notifications (3)</h6>
+                <small><a href="#" class="text-primary">Mark all as read</a></small>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item d-flex py-2">
+                  <div class="bg-success bg-opacity-10 rounded-circle p-2 me-2">
+                    <i class="fas fa-check-circle text-success"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">New order received</div>
+                    <small class="text-muted">2 minutes ago</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item d-flex py-2">
+                  <div class="bg-info bg-opacity-10 rounded-circle p-2 me-2">
+                    <i class="fas fa-info-circle text-info"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">System update available</div>
+                    <small class="text-muted">1 hour ago</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item d-flex py-2">
+                  <div class="bg-warning bg-opacity-10 rounded-circle p-2 me-2">
+                    <i class="fas fa-exclamation-triangle text-warning"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold">Server maintenance scheduled</div>
+                    <small class="text-muted">Tomorrow 2:00 AM</small>
+                  </div>
+                </a>
+              </li>
+              <li class="px-3 py-2 border-top text-center">
+                <a href="#" class="text-primary">View all notifications</a>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- Help dropdown -->
+          <li class="nav-item dropdown d-none d-sm-block">
+            <a class="nav-link" href="#" id="helpDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-question-circle"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" style="width: 300px;">
+              <li class="dropdown-header">Help Center</li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-life-ring me-2"></i> Support Center</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-book me-2"></i> Documentation</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-headset me-2"></i> Contact Us</a></li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <div class="px-3 py-2">
+                  <h6 class="mb-2">Quick Stats</h6>
+                  <div class="quick-stat d-flex align-items-center">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                      <div>Tasks Completed</div>
+                      <small class="text-muted">12/15 (80%)</small>
+                    </div>
+                  </div>
+                  <div class="quick-stat d-flex align-items-center">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                      <div>Unread Messages</div>
+                      <small class="text-muted">3 new messages</small>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li class="px-3 py-1 small text-muted d-flex justify-content-between">
+                <span>Version 2.4.1</span>
+                <span>Last updated: Today</span>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- Profile dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+              <img src="https://storage.googleapis.com/a1aa/image/31303d6f-a90a-461b-9c8c-3172975c7c81.jpg" class="profile-img rounded-circle me-2">
+              <span class="d-none d-lg-inline">John Doe</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-0" style="width: 320px;">
+              <div class="p-3 border-bottom">
+                <div class="d-flex align-items-center">
+                  <img src="https://storage.googleapis.com/a1aa/image/31303d6f-a90a-461b-9c8c-3172975c7c81.jpg" class="profile-img rounded-circle me-3">
+                  <div>
+                    <h6 class="mb-0">John Doe <span class="status-indicator status-online"></span></h6>
+                    <small class="text-muted">john.doe@example.com</small>
+                    <span class="badge bg-success bg-opacity-10 text-success ms-1">Admin</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-0 p-2">
+                <div class="col-6">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-user d-block mb-1"></i>
+                    <small>Profile</small>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-cog d-block mb-1"></i>
+                    <small>Settings</small>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-credit-card d-block mb-1"></i>
+                    <small>Billing</small>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="d-block text-center p-2 rounded text-decoration-none text-dark hover-bg-light">
+                    <i class="fas fa-question-circle d-block mb-1"></i>
+                    <small>Help</small>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item"><i class="fas fa-user-cog me-2"></i> Account Settings</a>
+              <a href="#" class="dropdown-item"><i class="fas fa-shield-alt me-2"></i> Privacy</a>
+              <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-moon me-2"></i>Dark Mode</span>
+                <div class="dark-mode-toggle small">
+                  <div class="toggle-handle"></div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom navbar JS -->
+  <script src="js/navbar.js"></script>
+</body>
+</html>
